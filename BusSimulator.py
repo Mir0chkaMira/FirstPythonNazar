@@ -11,9 +11,9 @@ class Auto:
         self.model = model
         self.passengers = []
 
-    def add_passenger(self,*args):
-        for passenger in args:
-            self.passengers.append(passenger)
+    def add_passenger(self,human):
+        self.passengers.append(human)
+
 
     def print_passengers_name(self):
         if self.passengers != []:
@@ -22,8 +22,10 @@ class Auto:
             for passenger in self.passengers:
                 print(passenger.name)
 
+
         else:
             print(f"There are no passengers ib {self.brand}  {self.model}")
+
 
 
 nazar = Human("Nazar")
@@ -33,6 +35,7 @@ maks = Human("Maks")
 
 car = Auto("BMW", "X5")
 
-car.add_passenger(nazar, sasha, andriy, maks)
-
-car.print_passengers_name()
+car.add_passenger(nazar)
+car.add_passenger(nazar)
+car.add_passenger(nazar)
+car.add_passenger(nazar)
